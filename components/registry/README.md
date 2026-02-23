@@ -72,6 +72,7 @@ Your JSON must conform to [`components/registry/schemas/component.schema.json`](
 
 The validator enforces a few “lint” rules to keep the registry stable:
 
+- **JSON-only directory**: every file in `components/registry/components/` must end with `.json` (placeholder files like `.gitkeep` will fail CI).
 - **Unique repo**: `links.github` must be unique across all submissions. If the same repo was already submitted, CI will fail.
 - **HTTPS only**: all URLs must be `https://` and must not use `javascript:`, `data:`, or `file:` schemes.
 - **Stable images** (`media.image`): must be a stable `https://` URL.

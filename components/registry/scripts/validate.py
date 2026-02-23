@@ -206,6 +206,21 @@ def validate_components(repo_root: Path) -> list[ValidationIssue]:
     validator = _get_validator(schema_path)
 
     issues: list[ValidationIssue] = []
+    for file_path in sorted(components_dir.iterdir()):
+        if not file_path.is_file():
+            continue
+        if file_path.suffix != ".json":
+            issues.append(
+                ValidationIssue(
+                    file=file_path,
+                    schema=schema_path,
+                    message=(
+                        "Invalid file extension in components directory. "
+                        "Source component files must end with `.json`."
+                    ),
+                    json_path=None,
+                )
+            )
     for json_file in sorted(components_dir.glob("*.json")):
         issues.extend(_validate_one(json_file, schema_path, validator))
     return issues
