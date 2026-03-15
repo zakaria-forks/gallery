@@ -8,7 +8,7 @@
   "links": {
     "github": "https://github.com/zikojs/ziko-st-toc",
     "pypi": "ziko-st-toc",
-    "demo": "https://ziko-st-toc.streamlit.app/",
+    "demo": "https://ziko-st-toc-demo.streamlit.app/",
     "docs": null
   },
   "media": {
