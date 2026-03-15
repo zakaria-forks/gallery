@@ -9,7 +9,7 @@
     "github": "https://github.com/zikojs/ziko-st-toc",
     "pypi": "ziko-st-toc",
     "demo": "https://ziko-st-toc-demo.streamlit.app/",
-    "docs": null
+    "docs": "https://ziko-st-toc.netlify.app/"
   },
   "media": {
     "image": "https://raw.githubusercontent.com/zikojs/ziko-st-toc/refs/heads/main/assets/demo.gif"
